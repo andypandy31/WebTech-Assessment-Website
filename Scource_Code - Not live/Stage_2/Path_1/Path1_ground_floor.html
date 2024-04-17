@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="Path1_ground_floor.css">
+        <title>Captured Alive</title>
+        <link rel="icon" type="image/x-icon" href="../../Assests/favicon.ico">
+    </head>
+    <body onload="function_script()">
+        <ul class ="navigation">
+            <li><a href ="../../index.html">Home</a></li>
+            <li><a href ="../../Starter_pages/Readme.html">README</a></li>
+        </ul>
+
+        <h1 class="location_name">Ground floor path<h1>
+
+        <div class="grid-container">
+            <div class="text">You make it to the ground floor and discover you are hiiden in the shadow of a large stir case, with a quick look around you appear to be in a manner or mansion, as time passes you see nothing and hear nothing.</div>
+            <div class="option1">Option1: Wait in the shadow of the stair case </div>
+            <div class="option2">Option2: Make a run across the main hall to the front door to make </div>
+            <div class="option3">Option3: Walk along the side of the room and attemp to enter a side room.</div>
+        </div>
+        <div class="flex-container">
+            <a href="Path1_ground_floor_waiting.html">Option 1</a>
+            <a href="Path1_ground_floor_running_escape.html">Option 2</a>
+            <a href="Path1_ground_floor_trying_a_room.html">Option 3</a>
+        </div>
+    </body>
+    <script>
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                var score = localStorage.getItem("currentScore");
+                if(score < 11) {
+                    var score_update = parseInt(score) + 1;
+                    localStorage.setItem("currentScore", score_update);
+                }
+                alert("PLACE HOLDER TESTING " + localStorage.getItem("currentScore"))
+            }
+        }
+    </script>
+</html>

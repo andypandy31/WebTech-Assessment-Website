@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="Hallway_second_cell.css">
+        <title>Captured Alive</title>
+        <link rel="icon" type="image/x-icon" href="../../Assests/favicon.ico">
+    </head>
+    <body onload="function_script()">
+        <ul class ="navigation">
+            <li><a href ="../../index.html">Home</a></li>
+            <li><a href ="../../Starter_pages/Readme.html">README</a></li>
+        </ul>
+
+        <h1 class="location_name">second cell room<h1>
+
+        <div class="grid-container">
+            <div class="text">You reach the door you relize it is slightly ajar and peek throught the gap and see nothing and with a slight push similar to the first door it swings open with no sound and far to smooth a motion for it to not well maintained and step inside seeing more of the room now there are some cages, and a stair case carved into the wall just like the first room you awoke in with a cuple minute of investagetion you find nothing more and head back to the door, but before you can open it you hear sounds of grunting and the sounds, as you slowly open the door and peer you see what appears to be 3 beast men and a large dog with two people chained and cuffed being pulled along behind them.</div>
+            <div class="option1">Option1: Follow the beasts slowly up the stairs makeing sure they are up and gone before heading up yourself. </div>
+            <div class="option2">Option2: Head to the first cell where you awoke in an attempt to try and find where the beasts had come from as you had seen or hear nothing before.</div>
+        </div>
+        <div class="flex-container">
+            <a href="../../Stage_2/Path_2_delayed/Path2_ground_floor.html">Option 1</a>
+            <a href="Hallway_return_from_C2_to_C1_locked.html">Option 2</a>
+        </div>
+    </body>
+    <script>
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                var score = localStorage.getItem("currentScore");
+                if(score < 8) {
+                    var score_update = parseInt(score) + 1;
+                    localStorage.setItem("currentScore", score_update);
+                }
+                alert("PLACE HOLDER TESTING " + localStorage.getItem("currentScore"))
+            }
+        }
+    </script>
+</html>

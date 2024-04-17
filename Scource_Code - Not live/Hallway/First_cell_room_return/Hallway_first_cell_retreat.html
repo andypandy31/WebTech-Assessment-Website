@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="Second_floor_cell.css">
+        <title>Captured Alive-Home</title>
+        <link rel="icon" type="image/x-icon" href="../../Assests/favicon.ico">
+    </head>
+    <body onload="function_script()">
+        <ul class ="navigation">
+            <li><a href ="../../index.html">Home</a></li>
+            <li><a href ="../../Starter_pages/Readme.html">README</a></li>
+        </ul>
+
+        <h1 class="location_name">Hallway retreat<h1>
+
+        <div class="grid-container">
+            <div class="text">You turn the corner and glance round and confirming that you are not been followed for seen.</div>
+            <div class="option1">Option1: Return back to the second room and wait watching down the hallway from the door.</div>
+            <div class="option2">Option2: Dash across the hallway and make your way up the stair case with quick steps.</div>
+        </div>
+        <div class="flex-container">
+            <a href="Hallway_first_cell_retreat_escape.html">Option 1</a>
+            <a href="../../Stage_2/Path_1/Path1_ground_floor.html">Option 2</a>
+        </div>
+    </body>
+    <script>
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                var score = localStorage.getItem("currentScore");
+                if(score < 9) {
+                    var score_update = parseInt(score) + 1;
+                    localStorage.setItem("currentScore", score_update);
+                }
+                alert("PLACE HOLDER TESTING " + localStorage.getItem("currentScore"))
+            }
+        }
+    </script>
+</html>

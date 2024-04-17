@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="base_templete.css">
+     
+        <title>Captured Alive-Home</title>
+        <link rel="icon" type="image/x-icon" href="/Assests/favicon.ico">
+    </head>
+    <body onload="function_script()">
+        <ul class ="navigation">
+            <li><a href ="index.html">Home</a></li>
+            <li><a href ="Starter_pages/Readme.html">README</a></li>
+        </ul>
+
+        <h1 class="location_name">Home Page<h1>
+
+        <div class="grid-container">
+            <div class="text">Welcome! This is the home page for the - Caputed Alive - website. this is a story and choice driven visual novel/game where you as the main chacter have awaken caputed alive by the monsters of the night escape or die, goodluck.</div>
+            <div class="option1">Option1: Dream of a README page.</div>
+            <div class="option3">Option2: You awaken from this dream.</div>
+        </div>
+        <div class="flex-container">
+            <a href="Starter_pages/Readme.html">Option 1: Dream</a>
+            <a href="Starter_pages/First_room.html">Option 2: Begin</a>
+        </div>
+    </body>
+    <script>
+        // Delay Alert and script till page load.
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                // Setting value / insureing no null or undefined outputs.
+                if(score == 0 || score == null){
+                    localStorage.setItem("currentScore", 0);
+                }
+                // displaying current score to player.
+                var score = localStorage.getItem("currentScore");
+                alert("Current Score This Run! - " + score)
+            }
+        }
+    </script>
+</html>

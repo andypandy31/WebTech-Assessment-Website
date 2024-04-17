@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href ="Hallway.css">
+        <title>Captured Alive</title>
+        <link rel="icon" type="image/x-icon" href="../Assests/favicon.ico">
+    </head>
+    <body onload="function_script()">
+        <ul class ="navigation">
+            <li><a href ="../index.html">Home</a></li>
+            <li><a href ="../Starter_pages/Readme.html">README</a></li>
+        </ul>
+
+        <h1 class="location_name">A Hallway<h1>
+
+        <div class="grid-container">
+            <div class="text">You step through the door and make your way down the hallway, but not a minute of walking in the darkness and the small amounts of light start to show a split in the hallway, You flaten your self agenst the left side and peer round the right corner as you slowly gain a better view you see a nice looking set of spiral stairs that look utterly out of place in this cave like hallway. A quick glance over your shoulder shows a far shorter halway with a similer dooe to the one that you have just come from.</div>
+            <div class="option1">Option1: You go left intending to investage the door to check if there is an exit or just another room of cages.</div>
+            <div class="option2">Option2: You go right to see what is held at the top of the sprial stair case.</div>
+            <div class="option3">Option3: You turn back to where you have just come from and head back to the room where you awoke.</div>
+        </div>
+        <div class="flex-container">
+            <a href="Second_cell_room/Hallway_second_cell_room.html">Option 1</a>
+            <a href="../Stage_2/Path_1/Path1_ground_floor.html">Option 2</a>
+            <a href="First_cell_room_return/Hallway_first_cell_door.html">Option 3</a>
+        </div>
+    </body>
+    <script>
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                var score = localStorage.getItem("currentScore");
+                if(score < 7) {
+                    var score_update = parseInt(score) + 1;
+                    localStorage.setItem("currentScore", score_update);
+                }
+                alert("PLACE HOLDER TESTING " + localStorage.getItem("currentScore"))
+            }
+        }
+    </script>
+</html>
