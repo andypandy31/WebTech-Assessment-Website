@@ -6,7 +6,7 @@
         <title>Captured Alive-Home</title>
         <link rel="icon" type="image/x-icon" href="/Assests/favicon.ico">
     </head>
-    <body>
+    <body onload="function_script()">
         <ul class ="navigation">
             <li><a href ="index.html">Home</a></li>
             <li><a href ="Starter_pages/Readme.html">README</a></li>
@@ -25,6 +25,18 @@
         </div>
     </body>
     <script>
-      
+        // Delay Alert and script till page load.
+        function function_script() {
+            // Support check for local storage.
+            if(localStorage) {
+                // Setting value / insureing no null or undefined outputs.
+                if(score == 0 || score == null){
+                    localStorage.setItem("currentScore", 0);
+                }
+                // displaying current score to player.
+                var score = localStorage.getItem("currentScore");
+                alert("Current Score This Run! - " + score)
+            }
+        }
     </script>
 </html>
